@@ -1,0 +1,16 @@
+# windows setup
+
+i. Install choco
+ii. Install node and JDK(java development kit) using choco
+iii. Install android studio
+iv. Install SDK from SDK manager 
+v. Install one virtual device with venilla ice cream
+vi. add all environment variables => ANDROID_HOME, JAVA_HOME, and all paths
+
+# create react native app 
+
+* npx react-native init FirstProject
+* after new update => npx @react-native-community/cli init FirstProject
+
+* error => Error resolving plugin [id: 'com.facebook.react.settings']
+* solution => npm run android --clear-cache

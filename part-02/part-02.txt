@@ -1,0 +1,60 @@
+# WHAT IS REACT NATIVE ?
+
+=> React Native is an open-source framework developed by Facebook that allows developers to build mobile applications for iOS and Android using JavaScript and React. Unlike traditional mobile development, where separate codebases are required for iOS (Swift/Objective-C) and Android (Java/Kotlin), React Native enables cross-platform development with a single codebase.
+
+# Key Features of React Native:
+    * Cross-Platform Compatibility:
+        Write one codebase that works on both iOS and Android.
+    * Uses React:
+        Leverages React, a popular library for building user interfaces, but instead of rendering to the web (like React.js), it renders to mobile platforms.
+    * Native Performance:
+        React Native bridges JavaScript with native code, allowing it to use native components like Text, View, Button, etc., providing near-native performance.
+    * Live and Hot Reloading:
+        Live Reloading: Reloads the entire app after you save changes.
+        Hot Reloading: Only reloads the updated code, without refreshing the entire app.
+    * Access to Native APIs:
+        Interact with device features like camera, GPS, and push notifications using third-party libraries or custom native modules.
+    * Large Community and Ecosystem:
+        React Native has a strong developer community and a rich library ecosystem, making it easier to find solutions and speed up development.
+
+# Use Cases:
+    * Social media apps (e.g., Instagram, Facebook).
+    * E-commerce apps (e.g., Shopify).
+    * Messaging apps (e.g., Discord).
+    * Small to medium-scale applications needing a cost-effective solution.
+
+# Expo vs React Native CLI ?
+
+Expo => Expo is a framework and platform for universal React applications. It provides a managed workflow that simplifies the development process.
+
+    * Advantages
+        i. Quick Start: No need to install Android Studio or Xcode for basic development. Expo handles most of the setup.
+        ii. Simplified Development: Includes pre-configured tools and APIs for camera, push notifications, etc.
+        iii. Cross-Platform Ready: One command to run your app on iOS, Android, or the web.
+        iv. Over-the-Air Updates (OTA): Push updates to your app instantly without submitting it to app stores.
+        v. Access to Expo Go App: Test your app on real devices quickly via the Expo Go app.
+
+    * Disadvantages
+        i. Limited Native Module Support: If you need custom native modules or libraries not supported by Expo, you may face restrictions.
+        ii. Bigger App Size: Expo includes many libraries and APIs, even those you might not use, which can increase the app's size.
+        iii. Advanced Customization: Not as flexible for apps requiring advanced native customizations.
+    * When to Use Expo
+        i. For beginners or small projects.
+        ii. When you want to prototype or develop apps quickly.
+        iii. If your app uses features already supported by Expo's ecosystem.
+
+React Native CLI => The React Native CLI gives you full control over the development environment. It uses native development tools like Xcode (for iOS) and Android Studio.
+
+    * Advantages
+        i. Full Customization: You can write and integrate your own native modules in Java/Kotlin (Android) or Swift/Objective-C (iOS).
+        ii. Access to All Libraries: Any React Native library or third-party native module is supported.
+        iii. Smaller App Size: Only includes the dependencies you need.
+        iv. More Control: Ideal for performance tuning and advanced customizations.
+    * Disadvantages
+        i. Complex Setup: You must manually install and configure Android Studio, Xcode, and other dependencies.
+        ii. Longer Development Time: More manual work is required for things like splash screens, icons, etc.
+        iii. No Built-in OTA Updates: You need to handle updates via app store submissions or integrate a library like CodePush.
+    * When to Use React Native CLI
+        i. For large, complex projects requiring custom native code.
+        ii. When working with third-party libraries not supported by Expo.
+        iii. If you need maximum control over the development environment and app performance.
