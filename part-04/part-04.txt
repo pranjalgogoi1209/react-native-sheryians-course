@@ -1,0 +1,5 @@
+# Fundamental concepts
+
+import { Image, Text, View, Button, TouchableOpacity, Alert, TouchableHighlight, Pressable, SafeAreaView } from 'react-native'
+
+* Use SafeAreaView instead of View, so that it maintan the camera notch issue for ios, it's more safer.

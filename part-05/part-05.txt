@@ -1,0 +1,12 @@
+# Styling in React Native
+
+    * Inline css
+    * Style using Javascript object
+    * Style Sheet
+
+# Difference between Style using js object and Style Sheet => Whenever we re render things, js object reloads, but stylesheet loads single time.
+
+# Conditional css
+
+# Normal css concepts
+
