@@ -1,0 +1,3 @@
+# ScrollView => To active vertical scrolling
+
+# horizonal property to active horizontal scrolling
