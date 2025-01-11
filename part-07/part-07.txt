@@ -1,0 +1,36 @@
+# Flat List
+
+* Difference between ScrollView and FlatList =>
+
+1. ScrollView =>
+
+Purpose: Designed for displaying a limited number of items or content that fits reasonably in memory. It renders all its child components at once.
+
+Key Features:
+
+i. Static Content: Suitable for small datasets or static content like forms, simple text blocks, or images.
+ii. All Items Rendered: All child components are rendered at once, even if they're not visible on the screen.
+iii. No Optimization: Lacks built-in optimizations for rendering large datasets, which can lead to performance issues when dealing with large amounts of data.
+
+Use Cases:
+
+i. Small, static lists or layouts.
+ii. Content that does not involve dynamic loading or updates.
+iii. Limited memory consumption due to fewer elements.
+
+2. FlatList =>
+
+Purpose:Designed for efficiently rendering and managing large datasets using virtualization (only rendering items visible on the screen and a small buffer).
+
+Key Features:
+
+i. Dynamic Content: Ideal for rendering large or dynamic lists.
+ii. Virtualized Rendering: Renders only the visible items and pre-renders a few additional ones for smooth scrolling.
+iii. Performance Optimization: Significantly better performance for long lists as it minimizes memory and rendering overhead.
+iv. Customizable: Supports advanced features like item separators, pull-to-refresh, infinite scrolling, etc.
+
+Use Cases:
+
+i. Large lists of data (e.g., chats, feed items, product catalogs).
+ii. Data that needs dynamic updates or infinite scrolling.
+iii. Lists where performance is a concern.
