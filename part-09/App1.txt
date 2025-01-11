@@ -1,0 +1,200 @@
+import React from 'react';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  TouchableOpacity,
+  Alert,
+  TouchableHighlight,
+  Pressable,
+  SafeAreaView,
+  useColorScheme,
+  ScrollView,
+} from 'react-native';
+
+import barbieImg from './assets/barbie.jpg';
+
+const App = () => {
+  const style = {
+    container: {
+      width: '100%',
+      height: '100%',
+      backgroundColor: '#212121',
+      padding: 20,
+      gap: 10,
+    },
+  };
+
+  const theme = useColorScheme();
+
+  const isDarkMode = theme === 'dark';
+
+  const bgColor = isDarkMode ? '#000' : 'fff';
+  const txtColor = isDarkMode ? 'fff' : '000';
+
+  return (
+    <SafeAreaView
+      style={[style.container, {backgroundColor: bgColor, flex: 1}]}>
+      {/* text */}
+      <Text
+        style={{
+          color: txtColor,
+          fontSize: 20,
+          fontWeight: '600',
+          padding: 10,
+        }}>
+        My first project
+      </Text>
+
+      {/* import image from assets folder */}
+      {/* <Image source={require('./assets/barbie.jpg')} /> */}
+
+      {/* import local image */}
+      <Image source={barbieImg} />
+
+      {/* import external image */}
+      <Image
+        source={{
+          uri: 'https://avatars.githubusercontent.com/u/141986429?v=4',
+          width: 200,
+          height: 200,
+        }}
+      />
+
+      <View style={{gap: 20}}>
+        {/* button */}
+        <Button title="Click Me"></Button>
+
+        {/* custom button */}
+        <TouchableOpacity
+          onPress={() => Alert.alert('Button Clicked')}
+          style={styles.btn}>
+          <Text style={[styles.btnTxt, {color: txtColor}]}>
+            TouchableOpacity
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableHighlight
+          onPress={() => Alert.alert('Button Clicked')}
+          style={{
+            backgroundColor: 'orange',
+            paddingVertical: 10,
+            paddingHorizontal: 21,
+          }}>
+          <Text style={{color: txtColor}}>TouchableHighlight</Text>
+        </TouchableHighlight>
+
+        {/* preferred method */}
+        <Pressable
+          onPress={() => Alert.alert('Button Clicked')}
+          style={styles.btn}>
+          <Text style={[styles.btnTxt, {color: txtColor}]}>
+            Click Me = Pressable
+          </Text>
+        </Pressable>
+      </View>
+
+      <View style={styles.parent}>
+        <View style={[styles.parent.child, styles.parent.child1]}></View>
+        <View style={[styles.parent.child, styles.parent.child2]}></View>
+        <View style={[styles.parent.child, styles.parent.child3]}></View>
+      </View>
+
+      <View style={styles.flexTest}>
+        <View style={styles.flexTest.flexTestChild}>
+          <View style={styles.flexTest.flexTestChild.finalChild}></View>
+          <View style={styles.flexTest.flexTestChild.finalChild}></View>
+        </View>
+        <View style={styles.flexTest.flexTestChild2}>
+          <View style={styles.flexTest.flexTestChild2.childTest}></View>
+          <View style={styles.flexTest.flexTestChild2.childTest}></View>
+          <View style={styles.flexTest.flexTestChild2.childTest}></View>
+          <View style={styles.flexTest.flexTestChild2.childTest}></View>
+          <View style={styles.flexTest.flexTestChild2.childTest}></View>
+          <View style={styles.flexTest.flexTestChild2.childTest}></View>
+          <View
+            style={[
+              styles.flexTest.flexTestChild2.childTest,
+              styles.flexTest.flexTestChild2.childTestExtra,
+            ]}></View>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default App;
+
+const styles = StyleSheet.create({
+  btn: {
+    backgroundColor: 'pink',
+    padding: 10,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 50,
+    borderColor: 'white',
+    borderWidth: 5,
+  },
+  btnTxt: {color: 'black', fontSize: 20, fontWeight: 600},
+  parent: {
+    height: '30%',
+    borderColor: '#000',
+    borderWidth: 2,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    flexWrap: 'wrap',
+    child: {
+      width: '50%',
+      height: '50%',
+    },
+    child1: {
+      backgroundColor: 'red',
+    },
+    child2: {
+      backgroundColor: 'pink',
+    },
+    child3: {
+      backgroundColor: 'yellow',
+    },
+  },
+  flexTest: {
+    height: '30%',
+    borderColor: '#000',
+    borderWidth: 2,
+    flexTestChild: {
+      flex: 1,
+      borderColor: '#000',
+      borderWidth: 1,
+      flexDirection: 'row',
+      finalChild: {
+        flex: 1,
+        borderColor: 'purple',
+        borderWidth: 1,
+      },
+    },
+    flexTestChild2: {
+      flex: 2,
+      borderColor: '#000',
+      borderWidth: 1,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      // alignItems: "center", it doesn't work with flex-wrap
+      alignContent: 'center',
+      flexWrap: 'wrap',
+      childTest: {
+        borderColor: '#000',
+        borderWidth: 1,
+        width: '20%',
+        height: '30%',
+      },
+      childTestExtra: {
+        backgroundColor: 'red',
+        // flex: 1,
+        flexGrow: 1,
+      },
+    },
+  },
+});

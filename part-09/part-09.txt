@@ -1,0 +1,11 @@
+# React Native Navigation docs =>
+https://reactnavigation.org/docs/getting-started
+
+# Instalation => 
+
+1. npm install @react-navigation/native
+2. npm install react-native-screens react-native-safe-area-context
+
+# For Native Stack Navigation => 
+
+npm install @react-navigation/native-stack
